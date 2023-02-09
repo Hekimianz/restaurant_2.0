@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #3b4a6b;
+  color: #e7e7e7;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #58698e;
+  padding: 8px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#logoNav {
+  width: 50vw;
+  max-width: 500px;
+}
+
+#navBar {
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.navItem {
+  display: none;
+}
+
+#menuBtn {
+  width: 2em;
+  height: 2em;
+  margin-left: auto;
+  cursor: pointer;
+}
