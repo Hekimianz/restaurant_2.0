@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  height: 100vh;
-  background-color: #3b4a6b;
+  background-color: #2d2d2d;
   color: #e7e7e7;
+  font-family: "Roboto", sans-serif;
 }
 
 #footer {
@@ -11,7 +11,7 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-  background: #58698e;
+  background: #2d2d2d;
   padding: 8px 0;
 }
 
@@ -19,6 +19,12 @@ a {
   text-decoration: none;
   font-size: 1.1em;
   color: #e7e7e7;
+  transition: 0.5s all;
+}
+
+a:hover {
+  color: #7db60e;
+  font-size: 1.2em;
 }
 
 #logoNav {
@@ -27,10 +33,17 @@ a {
 }
 
 #content {
-  height: 100%;
+  height: fit-content;
+  padding-top: 30px;
+  background-image: url(/Users/aramhekimian/repos/restaurant_2.0/src/assets/pexels-erik-mclean-6159694.png);
+  background-size: cover;
+  padding-bottom: 67px;
+  background-color: black;
 }
 
 #navBar {
+  position: sticky;
+  top: 0px;
   border-bottom: 1px solid #e7e7e7;
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +51,7 @@ a {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  background: #2d2d2d;
 }
 
 #navLinks {
@@ -76,7 +90,59 @@ a {
 }
 
 .active {
-  color: #e0b54f;
+  color: #7db60e;
+}
+
+.homeImg {
+  width: 300px;
+  border-radius: 2px;
+}
+
+.intro {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.css-button-shadow--green {
+  min-width: 130px;
+  height: 40px;
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #7db60e;
+  box-shadow: 0 3px 1px -2px #7db60e, 0 2px 2px 0 #7db60e, 0 1px 5px 0 #7db60e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.css-button-shadow--green:active {
+  box-shadow: 0 4px 2px -3px #7db60e, 0 4px 5px 1px #7db60e,
+    0 2px 7px 1px #7db60e;
+}
+
+.extract {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sectionDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sectionDiv:last-of-type {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 850px) {
@@ -103,5 +169,20 @@ a {
 
   .active {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .homeImg {
+    width: 500px;
+  }
+
+  .intro {
+    width: 75vw;
+    margin-bottom: 50px;
+  }
+
+  .sectionDiv {
+    margin-bottom: 60px;
   }
 }

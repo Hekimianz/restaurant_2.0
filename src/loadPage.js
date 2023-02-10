@@ -1,7 +1,6 @@
 import logo from "./assets/logo.png";
 import menuBtnImage from "./assets/menuBtn.png";
 import homeLoad from "./home";
-import contactLoad from "./contact";
 import menuLoad from "./menu";
 import aboutLoad from "./about";
 
@@ -39,10 +38,6 @@ export default function pageLoad() {
         id: "menuNav",
         classList: "navItem",
       });
-      this.contactNav = Object.assign(document.createElement("span"), {
-        id: "contactNav",
-        classList: "navItem",
-      });
       this.footer = Object.assign(document.createElement("footer"), {
         id: "footer",
       });
@@ -57,18 +52,12 @@ export default function pageLoad() {
       this.homeNav.innerText = "Home";
       this.aboutNav.innerText = "About us";
       this.menuNav.innerText = "Menu";
-      this.contactNav.innerText = "Contact";
       this.footer.innerHTML =
         "Made by <a href='https://github.com/Hekimianz' target='_blank' ><span>Aram Hekimian</span>";
     },
     render() {
       document.body.insertBefore(this.navBar, this.content);
-      this.navLinks.append(
-        this.homeNav,
-        this.aboutNav,
-        this.menuNav,
-        this.contactNav
-      );
+      this.navLinks.append(this.homeNav, this.aboutNav, this.menuNav);
       this.navBar.append(this.logoImg, this.menuBtn, this.navLinks);
       document.body.appendChild(this.footer);
     },
@@ -94,9 +83,6 @@ export default function pageLoad() {
         } else if (evt.target.innerText === "Menu") {
           this.clearPage();
           menuLoad();
-        } else if (evt.target.innerText === "Contact") {
-          this.clearPage();
-          contactLoad();
         }
       }
     },
