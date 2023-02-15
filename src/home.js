@@ -1,5 +1,7 @@
 import aboutImg from "./assets/outside1.png";
 import menuImg from "./assets/ratcola.png";
+import aboutLoad from "./about";
+import menuLoad from "./menu";
 
 export default function homeLoad() {
   const page = {
@@ -7,8 +9,14 @@ export default function homeLoad() {
       this.cacheDom();
       this.modifyDom();
       this.render();
+      this.eventListeners();
+      this.activate();
     },
+
     cacheDom() {
+      this.activeLink = document.getElementById("homeNav");
+      this.notActiveLink1 = document.getElementById("aboutNav");
+      this.notActiveLink2 = document.getElementById("menuNav");
       this.body = document.getElementById("content");
       this.aboutDiv = Object.assign(document.createElement("div"), {
         id: "aboutDiv",
@@ -44,6 +52,9 @@ export default function homeLoad() {
         id: "menuIntro",
         classList: "intro",
       });
+      this.allBtns = document.getElementsByClassName(
+        "css-button-shadow--green"
+      );
     },
     modifyDom() {
       this.aboutIntro.innerText =
@@ -51,9 +62,26 @@ export default function homeLoad() {
       this.menuIntro.innerText =
         "Our menu features dishes inspired by the in-game cuisine, such as the limited edition RatCola from the General Sam brand. The secret recipe of this cola still remains a mystery. ";
       this.aboutBtn.innerHTML =
-        "<img class='extract' src= '/Users/aramhekimian/repos/restaurant_2.0/src/assets/extract.png'> About us";
+        "<img class='extract' src= '/Users/aramhekimian/repos/restaurant_2.0/src/assets/extract.png'> About Us";
       this.menuBtn.innerHTML =
         "<img class='extract' src= '/Users/aramhekimian/repos/restaurant_2.0/src/assets/menuIcon.png'> Our Menu";
+    },
+    eventListeners() {
+      for (let i = 0; i < this.allBtns.length; i += 1) {
+        this.allBtns[i].addEventListener("click", this.changePage.bind(this));
+      }
+    },
+    changePage(evt) {
+      if (evt.target.innerText === "About Us") {
+        this.clearPage();
+        aboutLoad();
+      } else if (evt.target.innerText === "Our Menu") {
+        this.clearPage();
+        menuLoad();
+      }
+    },
+    clearPage() {
+      this.body.innerText = "";
     },
     render() {
       this.aboutDiv.appendChild(this.img1);
@@ -64,6 +92,13 @@ export default function homeLoad() {
       this.menuDiv.appendChild(this.menuBtn);
       this.body.appendChild(this.aboutDiv);
       this.body.appendChild(this.menuDiv);
+    },
+    activate() {
+      if (this.activeLink) {
+        this.activeLink.classList.add("active");
+        this.notActiveLink1.classList.remove("active");
+        this.notActiveLink2.classList.remove("active");
+      }
     },
   };
   page.init();

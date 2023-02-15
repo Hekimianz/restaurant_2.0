@@ -93,7 +93,8 @@ a:hover {
   color: #7db60e;
 }
 
-.homeImg {
+.homeImg,
+.boxI {
   width: 300px;
   border-radius: 2px;
 }
@@ -145,6 +146,40 @@ a:hover {
   margin-bottom: 0;
 }
 
+.boxV {
+  box-shadow: 0 4px 2px -3px #7db60e, 0 4px 5px 1px #7db60e,
+    0 2px 7px 1px #7db60e;
+  border-radius: 4px;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.boxes:last-of-type {
+  margin-bottom: 0;
+}
+
+.paragraphs {
+  margin: 30px 10px 0px 10px;
+}
+
+.reviews {
+  text-align: end;
+  padding: 10px 30px;
+  font-family: "Crimson Text", serif;
+}
+
+.reviews:nth-of-type(even) {
+  text-align: start;
+  padding-bottom: 0;
+}
+
 @media screen and (min-width: 850px) {
   #menuBtn {
     display: none;
@@ -170,11 +205,60 @@ a:hover {
   .active {
     font-size: 2rem;
   }
+
+  #box1I {
+    width: 300px;
+  }
+
+  .boxV {
+    width: 300px;
+  }
+
+  .paragraphs {
+    font-size: 1.5em;
+    margin: 30px 60px 0px 60px;
+  }
+  #reviews {
+    display: flex;
+  }
+
+  .reviews {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px 15px;
+  }
+  .reviews:nth-of-type(even) {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .homeImg {
     width: 500px;
+  }
+
+  #box1I {
+    width: 500px;
+  }
+
+  .boxV {
+    width: 500px;
+  }
+
+  .paragraphs {
+    font-size: 1.5em;
+    margin: 30px 60px 0px 60px;
+  }
+  #reviews {
+    display: flex;
+  }
+
+  .reviews {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .reviews:nth-of-type(even) {
+    text-align: center;
   }
 
   .intro {
