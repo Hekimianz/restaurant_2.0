@@ -2,6 +2,8 @@ import aboutImg from "./assets/outside1.png";
 import menuImg from "./assets/ratcola.png";
 import aboutLoad from "./about";
 import menuLoad from "./menu";
+import icon1 from "./assets/extract.png";
+import icon2 from "./assets/menuIcon.png";
 
 export default function homeLoad() {
   const page = {
@@ -61,10 +63,8 @@ export default function homeLoad() {
         "Welcome to the Cheeki Breeki, where we bring the rugged and intense city of Tarkov to life.";
       this.menuIntro.innerText =
         "Our menu features dishes inspired by the in-game cuisine, such as the limited edition RatCola from the General Sam brand. The secret recipe of this cola still remains a mystery. ";
-      this.aboutBtn.innerHTML =
-        "<img class='extract' src= '/Users/aramhekimian/repos/restaurant_2.0/src/assets/extract.png'> About Us";
-      this.menuBtn.innerHTML =
-        "<img class='extract' src= '/Users/aramhekimian/repos/restaurant_2.0/src/assets/menuIcon.png'> Our Menu";
+      this.aboutBtn.innerHTML = `<img class='extract' src=${icon1}> About Us`;
+      this.menuBtn.innerHTML = `<img class='extract' src=${icon2}> Our Menu`;
     },
     eventListeners() {
       for (let i = 0; i < this.allBtns.length; i += 1) {
