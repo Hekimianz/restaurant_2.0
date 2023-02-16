@@ -45,6 +45,7 @@ export default function aboutLoad() {
         classList: "boxV",
         autoplay: "autoplay",
         loop: "loop",
+        playsinline: "playsinline",
       });
       this.box2VSrc = Object.assign(document.createElement("source"), {
         src: video1,
@@ -66,6 +67,7 @@ export default function aboutLoad() {
         classList: "boxV",
         autoplay: "autoplay",
         loop: "loop",
+        playsinline: "playsinline",
       });
       this.box3VSrc = Object.assign(document.createElement("source"), {
         src: video2,
