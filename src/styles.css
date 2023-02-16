@@ -173,11 +173,33 @@ a:hover {
   text-align: end;
   padding: 10px 30px;
   font-family: "Crimson Text", serif;
+  font-style: italic;
 }
 
 .reviews:nth-of-type(even) {
   text-align: start;
   padding-bottom: 0;
+}
+
+#menuCont {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  gap: 50px 0;
+}
+
+.menuImgs {
+  width: 100px;
+}
+#menuI9 {
+  width: 50px;
+}
+
+.menuParagraphs {
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
 }
 
 @media screen and (min-width: 850px) {
@@ -206,7 +228,8 @@ a:hover {
     font-size: 2rem;
   }
 
-  #box1I {
+  #box1I,
+  #menuI {
     width: 300px;
   }
 
@@ -230,6 +253,18 @@ a:hover {
   .reviews:nth-of-type(even) {
     text-align: center;
   }
+
+  .menuImgs {
+    width: 150px;
+  }
+
+  #menuI9 {
+    width: 75px;
+  }
+
+  .menuParagraphs {
+    font-size: 1.3em;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -237,7 +272,8 @@ a:hover {
     width: 500px;
   }
 
-  #box1I {
+  #box1I,
+  #menuI {
     width: 500px;
   }
 
@@ -268,5 +304,17 @@ a:hover {
 
   .sectionDiv {
     margin-bottom: 60px;
+  }
+
+  .menuImgs {
+    width: 200px;
+  }
+
+  #menuI9 {
+    width: 100px;
+  }
+
+  .menuParagraphs {
+    font-size: 1.5em;
   }
 }
